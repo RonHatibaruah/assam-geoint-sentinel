@@ -180,61 +180,46 @@ An automated, near-real-time Geospatial Intelligence (GEOINT) web platform that 
 ---
 
 ## 5. Development Methodology & Intermediate Steps
-*(Word Count: ~445 words | Limit: 500 words)*
+*(Word Count: ~425 words | Limit: 500 words)*
 
-### Development Methodology: Agile Geospatial-DevOps (GeoAgile)
-The project will be executed using an iterative Agile framework structured across 2-week sprints, integrating continuous geospatial ground-truthing and stakeholder validation loops with ASSAC and departmental domain experts.
+### Development Methodology
+We adopt a hybrid Agile-Stage-Gate engineering methodology specifically structured for geospatial deep-learning systems. The project is organized into two-week sprints grouped across six disciplined sequential steps, ensuring continuous risk reduction, transparent stakeholder review, and measurable technical outputs at every milestone.
 
-```
-┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
-│ Phase 1:         │     │ Phase 2: Data    │     │ Phase 3: Model   │
-│ Discovery & ASSAC│ ──> │ Curation & S-1/2 │ ──> │ Training & Pilot │
-│ Requirements     │     │ Pipeline Build   │     │ Architecture     │
-└──────────────────┘     └──────────────────┘     └──────────────────┘
-                                                           │
-                                                           ▼
-┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
-│ Phase 6: Pilot   │     │ Phase 5: MVP     │     │ Phase 4: Full-   │
-│ Deployment &     │ <── │ Integration &    │ <── │ Stack Platform   │
-│ Tech Handover    │     │ Rigorous Testing │     │ & GIS UI Build   │
-└──────────────────┘     └──────────────────┘     └──────────────────┘
-```
+### Sequential Intermediate Steps & Key Outputs:
 
-### Sequential Intermediate Steps & Key Deliverables
+1. **Step 1: Discovery, Baseline Mapping & Stakeholder Alignment (Weeks 1–3)**
+   - Requirement alignment workshops with ASSAC, Forest Department, and Revenue officials.
+   - Finalize Assam-specific 8-class LULC schema conforming to National Remote Sensing Centre (NRSC) standards.
+   - Delineate pilot testbed zones: Kamrup Metropolitan (urbanization/hill slicing), Deepor Beel (wetland encroachment), and Majuli/Kaziranga (riverine erosion and vegetative buffer).
+   - *Key Output:* System Requirements Specification (SRS) and Geospatial Data Dictionary approved by ASSAC.
 
-#### Step 1: Discovery, Baseline Mapping & Stakeholder Alignment (Weeks 1–3)
-- In-depth requirement workshops with ASSAC, Forest Department, and Revenue officials.
-- Finalize state-specific LULC taxonomy (8 core classes aligning with NRSC LULC classification standards).
-- Identify and delineate high-priority pilot zones: Kamrup Metropolitan (urbanization/hill slicing), Deepor Beel (wetland encroachment), and Majuli/Kaziranga (riverine erosion and vegetative buffer).
-- *Deliverable:* System Requirements Specification (SRS) & Geospatial Data Dictionary.
+2. **Step 2: Ingestion Pipeline & Training Corpus Harmonization (Weeks 4–7)**
+   - Configure automated Copernicus API and STAC ingestors for Sentinel-2 (optical) and Sentinel-1 (SAR).
+   - Implement preprocessing pipeline: orthorectification, cloud masking (`s2cloudless`), and Sen2Cor atmospheric calibration.
+   - Assemble historical satellite pairs (2018–2025) across diverse Assam agro-climatic zones, augmented with ground-truth verification polygons.
+   - *Key Output:* Operational Cloud-Optimized GeoTIFF (COG) Ingestion Pipeline and Curated Training Dataset (10,000+ annotated chips).
 
-#### Step 2: Data Pipeline & Harmonization Engine Setup (Weeks 4–7)
-- Configure automated Copernicus API and STAC ingestors for Sentinel-2 (optical) and Sentinel-1 (SAR).
-- Implement preprocessing pipeline: orthorectification, cloud masking (`s2cloudless`), and radiometry calibration.
-- Build training dataset: assemble historical satellite pairs (2018–2025) across diverse terrains in Assam, augmented with ground-truth polygons.
-- *Deliverable:* Operational Cloud-Optimized GeoTIFF (COG) Ingestion Pipeline & Curated Training Dataset.
+3. **Step 3: Model Architecture, Training & Benchmark Optimization (Weeks 8–12)**
+   - Train bi-temporal ChangeFormer and Swin-UNet models on high-performance GPU clusters.
+   - Optimize inference speed using TensorRT and ONNX runtime to enable rapid regional tile inference.
+   - Evaluate models using IoU (Intersection over Union), F1-Score, and Overall Accuracy across all 8 classes.
+   - *Key Output:* Trained GeoAI model weights achieving >88% validation F1-score with published benchmark metrics.
 
-#### Step 3: Model Architecture, Training & Benchmark Optimization (Weeks 8–12)
-- Train bi-temporal ChangeFormer and Swin-UNet models on GPU clusters.
-- Evaluate models using IoU (Intersection over Union), F1-Score, and Overall Accuracy across all 8 classes.
-- Optimize inference speed using TensorRT and ONNX runtime to enable rapid regional tile inference.
-- *Deliverable:* Trained GeoAI model weights achieving >88% validation F1-score with published benchmark metrics.
+4. **Step 4: Full-Stack Web GIS & Cadastral Spatial Join Engineering (Weeks 13–17)**
+   - Build responsive React/Tailwind frontend with split-view comparison slider, layer switcher, and spectral index analytics.
+   - Develop Fastify backend with PostGIS spatial query engine for cadastral vector overlay and instantaneous zonal statistics.
+   - Implement automated alert notification module and georeferenced PDF inspection dossier generator.
+   - *Key Output:* Integrated working MVP deployed in a secure staging environment.
 
-#### Step 4: Full-Stack Web GIS & Dashboard Engineering (Weeks 13–17)
-- Build responsive React/Tailwind frontend with split-view comparison slider, layer switcher, and spectral index analytics.
-- Develop FastAPI backend with PostGIS spatial query engine for cadastral vector overlay and instantaneous zonal statistics.
-- Implement automated alert notification module and georeferenced PDF inspection dossier generator.
-- *Deliverable:* Integrated working MVP running in a staging environment.
+5. **Step 5: Field Validation, Ground-Truthing & Model Refinement (Weeks 18–21)**
+   - Deploy prototype in pilot districts (Kamrup Metro & Nagaon); conduct on-ground field validation of flagged alerts alongside forest and revenue field staff.
+   - Compute confusion matrices against field reality; retrain model using active learning loops on false positives.
+   - *Key Output:* Field Validation Assessment Report and Refined Production Release.
 
-#### Step 5: Field Validation, Ground-Truthing & Model Refinement (Weeks 18–21)
-- Deploy prototype in pilot districts (Kamrup Metro & Nagaon); conduct on-ground field validation of flagged alerts alongside forest and revenue field staff.
-- Compute confusion matrices against field reality; retrain model using active learning loops on false positives.
-- *Deliverable:* Field Validation Assessment Report & Refined Production Release.
-
-#### Step 6: Production Hardening, Security Audit & Departmental Handover (Weeks 22–24)
-- Undertake OWASP security assessment, load testing, and NIC/MeghRaj hosting compliance.
-- User training sessions and comprehensive documentation delivery for ASSAC operators.
-- *Deliverable:* Final Production Deployment, Source Code Repository, and User Manuals.
+6. **Step 6: Production Hardening, Security Audit & Departmental Handover (Weeks 22–24)**
+   - Undertake OWASP security assessment, load testing, and NIC/MeghRaj hosting compliance.
+   - User training sessions and comprehensive documentation delivery for ASSAC operators.
+   - *Key Output:* Final Production Deployment, Source Code Repository, and User Manuals.
 
 ---
 
