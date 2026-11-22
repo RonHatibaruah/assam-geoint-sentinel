@@ -26,7 +26,7 @@
   {
     "id": 5,
     "filename": "fig5_optical_vs_sar_monsoon_penetration.jpg",
-    "title": "Monsoon All-Weather Breakthrough: Sentinel-1 SAR Piercing Heavy Cloud Cover Where Optical Fails",
+    "title": "Monsoon All-Weather Breakthrough: Sentinel-1 SAR Piercing Heavy Cloud Cover Where Optical SATELLITES Fail",
     "prompt": "A compelling 16:9 widescreen technological comparison infographic on a clean white blueprint background illustrating MONSOON ALL-WEATHER BREAKTHROUGH: SENTINEL-1 SAR PIERCING HEAVY CLOUD COVER WHERE OPTICAL SATELLITES FAIL. The header displays bold dark navy typography with subtitle Solving North-East India's 6-Month Cloud Occlusion Barrier with Radar-Optical Multi-Modal Fusion. The graphic presents a dramatic side-by-side split screen during peak July monsoon: On the left, CONVENTIONAL OPTICAL (Sentinel-2/Landsat) obscured by 100% opaque dense white storm clouds with 'Zero Ground Visibility / Workflow Blind Spot' badge; on the right, DUAL-POLARIZATION C-BAND SAR (Sentinel-1) emitting radar microwave pulses penetrating directly through cloud blankets to cleanly map terrain, water bodies, and structural ground changes in high-contrast cyan and amber backscatter. Includes comparative metrics: 38% vs 100% Annual Operational Uptime. Clean 2D vector aesthetic, dark navy, electric cyan, and gold accents."
   },
   {
@@ -58,5 +58,53 @@
     "filename": "fig10_assam_pilot_validation_matrix.jpg",
     "title": "Assam Statewide Pilot Validation Framework Across Three Distinct Physiographic Zones",
     "prompt": "A master strategic pilot deployment infographic in 16:9 widescreen on a clean white blueprint background with subtle geographic contour lines illustrating THE ASSAM STATEWIDE PILOT VALIDATION MATRIX ACROSS THREE DIVERSE PHYSIOGRAPHIC TESTBEDS. The header displays bold dark navy typography RIGOROUS MULTI-TERRAIN GROUND VALIDATION FRAMEWORK FOR NESFIC-D-21. The center features a stylized outline map of Assam with three prominent highlighted validation zones connected to detailed diagnostic cards: 1) ZONE 1: URBAN & HILL TRACTS (Kamrup Metropolitan / Guwahati Hills) - Monitoring illegal hill slicing, stone quarrying, and flood retention basin preservation; 2) ZONE 2: ECO-SENSITIVE SANCTUARIES (Golaghat / Nagaon / Kaziranga Buffer) - Tracking forest canopy thinning, animal corridor encroachment, and tea estate boundary integrity; 3) ZONE 3: RIVERINE & DYNAMIC ISLANDS (Majuli Island / Brahmaputra Valley) - Measuring rapid bankline erosion, sandbar migration, and village embankment threat indices. Clean 2D flat vector design, royal blue, emerald green, and crimson accents, crisp demographic and geographic data badges."
+  },
+  {
+    "id": 11,
+    "filename": "fig11_current_vs_ai_workflow_comparison.jpg",
+    "title": "Bhu-Drishti AI vs Manual Enforcement Process Swimlane Comparison",
+    "prompt": "A master 16:9 widescreen technological process blueprint and comparative workflow infographic comparing traditional manual land encroachment inspection versus Bhu-Drishti AI automated detection in Assam. Top swimlane tinted in amber warning hues shows 'Current Manual Process': 90 to 180 days delay, manual public petition, physical site visit, paper cadastral dispute, delayed eviction. Bottom swimlane in glowing neon cyan and emerald green shows 'Bhu-Drishti AI Closed-Loop Process': less than 48 hours total, autonomous Sentinel satellite pass, ChangeFormer AI inference, instant Dharitree cadastral join, automated legal notice dispatch, offline mobile verification. Clean tech diagram layout on dark navy blue background with glowing data connectors, time-saving metrics, HUD telemetry indicators, ultra-sharp vector blueprint style."
+  },
+  {
+    "id": 12,
+    "filename": "fig12_multitier_rolebased_ui_architecture.jpg",
+    "title": "Multi-Tier Role-Based Portal & Field Command UI Architecture",
+    "prompt": "A master 16:9 widescreen technological software interface and UI architecture infographic showing a multi-tier governance system for Assam Land Use surveillance. Features three sleek isometric floating digital dashboard screens on a dark navy cybernetic grid: Screen 1 'State Command Center' (Chief Secretary / ASSAC) showing statewide macro-heatmaps, district performance ranking, and forest preservation KPIs; Screen 2 'District & Circle Office Portal' (DC / Revenue Circle Officer) showing cadastral parcel Dag-wise encroachment queue and statutory eviction dispatch; Screen 3 'Field Surveyor Mobile UI' (Mondal / Forest Guard) showing offline GPS boundary map, geo-tagged photo logger, and e-signature stamp. Neon cyan and emerald green UI elements, glassmorphism, crisp data telemetry, ultra-clean modern government enterprise software mockup."
+  },
+  {
+    "id": 13,
+    "filename": "fig13_12month_engineering_roadmap_gantt.jpg",
+    "title": "12-Month Stage-Gate Engineering Roadmap & Gantt Milestone Schedule",
+    "prompt": "A master 16:9 widescreen technological project roadmap and Gantt milestone schedule infographic for a 12-month Geospatial AI engineering rollout in Assam. Designed as a sleek glowing horizontal timeline across four quarters Q1 to Q4 on a dark navy blue background with neon cyan, emerald green, and golden amber milestone nodes. Highlights six key stage gates: M1 Month 2 Satellite Ingestion & Calibration; M2 Month 4 ChangeFormer & Swin-UNet Model Tuning; M3 Month 6 Dharitree Cadastral WFS/WMS Integration; M4 Month 8 Offline-First Mobile PWA; M5 Month 10 Kamrup Metro & Majuli Field Pilot; M6 Month 12 Statewide ASDC Cloud Deployment. Includes KPI deliverable tags, stage-gate review diamonds, progress tracking bars, technical project management blueprint."
+  },
+  {
+    "id": 14,
+    "filename": "fig14_team_expertise_raci_matrix.jpg",
+    "title": "Multidisciplinary Team Structure & Specialist RACI Governance Matrix",
+    "prompt": "A master 16:9 widescreen technological organizational framework and RACI governance matrix infographic for Assam GeoAI project. Dark navy background with glowing cyan modular cards showing multidisciplinary roles: Project Director & PI, Lead Remote Sensing Scientist, Deep Learning Computer Vision Engineer, Cloud Geospatial Architect, and Assam Cadastral Domain Specialist. Below the organizational tree is a structured glowing matrix table displaying RACI responsibilities (Responsible, Accountable, Consulted, Informed) across Ingestion, Model Development, Cadastral Join, Mobile App, and Field Pilots. Crisp data labels, expertise badges, technical team deployment blueprint."
+  },
+  {
+    "id": 15,
+    "filename": "fig15_multisensor_data_ingestion_pipeline.jpg",
+    "title": "Multi-Sensor Data Ingestion, Harmonization & Lineage Topology",
+    "prompt": "A master 16:9 widescreen technological data architecture and ingestion pipeline infographic showing multi-sensor earth observation inputs converging into a cloud geospatial repository. Left side displays diverse data sources: Sentinel-1 C-band SAR radar, Sentinel-2 MSI optical, Cartosat-3 sub-meter, PlanetScope NICFI, and UAV Drone orthomosaics. Center block shows harmonization engines: Sen2Cor atmospheric correction, SNAP terrain correction, and Cloud-Optimized GeoTIFF (COG) tiling. Right side shows SpatioTemporal Asset Catalog (STAC) and PostGIS spatial database feeding into ChangeFormer deep learning models. Dark navy blue grid background, glowing data stream arrows in neon cyan, magenta, and emerald green, HUD telemetry counters, sophisticated data engineering blueprint."
+  },
+  {
+    "id": 16,
+    "filename": "fig16_zerotrust_cloud_cybersecurity_architecture.jpg",
+    "title": "Zero-Trust Cloud & Cyber-Governance Security Architecture",
+    "prompt": "A master 16:9 widescreen cyber-defense and cloud security architecture infographic for Assam government geospatial infrastructure. Multi-layered isometric security diagram on a dark navy blue grid: Layer 1 Perimeter Defense (Assam State Data Centre ASDC / MeghRaj Cloud, Web Application Firewall, DDoS shield); Layer 2 Identity & Access Governance (Jan Parichay SSO, Role-Based Access Control, multi-factor authentication); Layer 3 Data Protection (AES-256 encryption at rest, TLS 1.3 in transit, automated PII redaction on revenue pattas); Layer 4 Non-Repudiation Audit (append-only SHA-256 cryptographic audit logs compliant with Section 65B Indian Evidence Act). Glowing cyan shield overlays, emerald green security nodes, amber audit locks, high-tech cybersecurity framework."
+  },
+  {
+    "id": 17,
+    "filename": "fig17_assam_5district_pilot_rollout_map.jpg",
+    "title": "Assam 5-District Phased Pilot Rollout & Geographic Validation Zones",
+    "prompt": "A master 16:9 widescreen geographic validation and strategic deployment map infographic of the state of Assam on dark navy blue background. Stylized glowing neon cyan vector map of Assam highlighting 5 high-priority pilot zones with callout cards: 1. Kamrup Metro (Guwahati urban fringe hill cutting and earth extraction); 2. Majuli Island (Brahmaputra fluvial bankline erosion and sandbar char migration); 3. Sonitpur / Nagaon (Kaziranga National Park eco-sensitive buffer zone protection); 4. Darrang & Morigaon (Wetland beel siltation and encroachment); 5. Cachar / Barak Valley (Tea garden land conversion and forest fragmentation). Connected with high-tech glowing telemetry pins, GPS coordinate badges, terrain challenge icons, strategic deployment blueprint."
+  },
+  {
+    "id": 18,
+    "filename": "fig18_risk_severity_matrix_mitigation_framework.jpg",
+    "title": "Enterprise Risk Severity Heatmap & Operational Mitigation Matrix",
+    "prompt": "A master 16:9 widescreen risk assessment and engineering mitigation framework infographic. Features a 5x5 Risk Severity Heatmap (Likelihood vs Impact) with colored grid zones from low green to high red on dark navy background. Plots four critical operational risks: R1 Persistent Monsoon Cloud Cover (mitigated by Sentinel-1 C-band SAR all-weather radar); R2 Cadastral Spatial Misalignment (mitigated by auto-GCP affine transformation with 1.2m tolerance); R3 Remote Char Network Blackouts (mitigated by SQLite offline-first mobile sync); R4 Seasonal Agricultural False Positives (mitigated by harmonic NDVI phenological filtering). Side panels feature mitigation action cards with neon cyan borders, checkmarks, and resilience ratings, executive decision blueprint."
   }
 ]

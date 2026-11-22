@@ -99,6 +99,70 @@ const INFOGRAPHICS: InfographicItem[] = [
     figureLabel: 'Figure 10',
     targetSection: 'Section 12: Resources, Risks & Pilot Validation',
     description: 'Strategic deployment map highlighting Kamrup Metro (Urban/Hills), Kaziranga (Forest buffer), and Majuli (Riverine char dynamics).'
+  },
+  {
+    id: 11,
+    filename: 'fig11_current_vs_ai_workflow_comparison.jpg',
+    title: 'Bhu-Drishti AI vs Manual Enforcement Process Swimlane Comparison',
+    figureLabel: 'Figure 11',
+    targetSection: 'Section 1: Problem Understanding & User Workflow',
+    description: 'Side-by-side comparative swimlane diagram showing 90-180 days manual lag versus <48 hours automated satellite detection and legal notice dispatch.'
+  },
+  {
+    id: 12,
+    filename: 'fig12_multitier_rolebased_ui_architecture.jpg',
+    title: 'Multi-Tier Role-Based Portal & Field Command UI Architecture',
+    figureLabel: 'Figure 12',
+    targetSection: 'Section 3: User Journey & Wireframes',
+    description: 'Hierarchical dashboard interface layout covering State Command Center (Macro KPIs), District/Circle Portal (Dag Encroachment Queue), and Field Mobile App.'
+  },
+  {
+    id: 13,
+    filename: 'fig13_12month_engineering_roadmap_gantt.jpg',
+    title: '12-Month Stage-Gate Engineering Roadmap & Gantt Milestone Schedule',
+    figureLabel: 'Figure 13',
+    targetSection: 'Section 6: Development Timeline & Milestones',
+    description: 'Horizontal engineering Gantt timeline spanning Q1 to Q4 with 6 core milestone gates from satellite ingestion to state-wide ASDC deployment.'
+  },
+  {
+    id: 14,
+    filename: 'fig14_team_expertise_raci_matrix.jpg',
+    title: 'Multidisciplinary Team Structure & Specialist RACI Governance Matrix',
+    figureLabel: 'Figure 14',
+    targetSection: 'Section 8: Team, Manpower & Expertise',
+    description: 'Organizational hierarchy and RACI governance matrix mapping core specialists across AI models, remote sensing, cadastral land laws, and cloud architecture.'
+  },
+  {
+    id: 15,
+    filename: 'fig15_multisensor_data_ingestion_pipeline.jpg',
+    title: 'Multi-Sensor Data Ingestion, Harmonization & Lineage Topology',
+    figureLabel: 'Figure 15',
+    targetSection: 'Section 7: Data & Information Requirements',
+    description: 'Multi-tier data flow uniting Sentinel-1 SAR, Sentinel-2 Optical, Cartosat, PlanetScope, and Dharitree Cadastral Shapefiles into PostGIS and STAC.'
+  },
+  {
+    id: 16,
+    filename: 'fig16_zerotrust_cloud_cybersecurity_architecture.jpg',
+    title: 'Zero-Trust Cloud & Cyber-Governance Security Architecture',
+    figureLabel: 'Figure 16',
+    targetSection: 'Section 10: Security, Privacy, Safety & Compliance',
+    description: 'Four-layer defense-in-depth security model: ASDC perimeter, Jan Parichay SSO RBAC, AES-256 data protection, and Section 65B-compliant audit trails.'
+  },
+  {
+    id: 17,
+    filename: 'fig17_assam_5district_pilot_rollout_map.jpg',
+    title: 'Assam 5-District Phased Pilot Rollout & Geographic Validation Zones',
+    figureLabel: 'Figure 17',
+    targetSection: 'Section 12: Resources, Risks & Pilot Validation',
+    description: 'Geographic deployment map highlighting Kamrup Metro, Majuli, Sonitpur/Kaziranga buffer, Darrang, and Cachar with terrain-specific challenge matrices.'
+  },
+  {
+    id: 18,
+    filename: 'fig18_risk_severity_matrix_mitigation_framework.jpg',
+    title: 'Enterprise Risk Severity Heatmap & Operational Mitigation Matrix',
+    figureLabel: 'Figure 18',
+    targetSection: 'Section 12: Resources, Risks & Pilot Validation',
+    description: '5x5 risk severity heatmap charting persistent monsoon clouds, cadastral misalignment, and network dropouts paired with engineered fail-safes.'
   }
 ];
 
@@ -118,13 +182,13 @@ export const GalleryView: React.FC = () => {
             Proposal Supporting Evidence & Infographics Gallery
           </h2>
           <p className="text-xs text-slate-300 mt-1 max-w-2xl leading-relaxed">
-            All 10 technological framework infographics generated using your Google Pro account (`kalyanjit@gmail.com`) in 16:9 widescreen blueprint aesthetic for direct inclusion in the NESFIC-D-21 Proposal Evidence PDF.
+            All 18 technological framework infographics generated using your Google Pro account (`kalyanjit@gmail.com`) in 16:9 widescreen blueprint aesthetic for direct inclusion in the NESFIC-D-21 Proposal Evidence PDF.
           </p>
         </div>
 
         <div className="flex items-center space-x-2 text-xs">
           <span className="px-3 py-1.5 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono font-bold">
-            10 / 10 Frameworks Ready
+            18 / 18 Frameworks Ready
           </span>
         </div>
       </div>
