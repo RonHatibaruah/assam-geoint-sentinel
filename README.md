@@ -9,6 +9,10 @@
 
 **🌐 Production Deployment:** **[https://assam-geoint-sentinel.pages.dev](https://assam-geoint-sentinel.pages.dev)**
 
+### 📥 Official Grant Submission PDFs (Under 10 MB)
+- 📄 **Proposal Document PDF:** [Download Bhu_Drishti_Assam_Proposal_Document.pdf](https://assam-geoint-sentinel.pages.dev/Bhu_Drishti_Assam_Proposal_Document.pdf) *(5.53 MB • All 12 Sections with Figures & Word Count Validations)*
+- 📑 **Proof of Work & Evidence PDF:** [Download Bhu_Drishti_Assam_Proof_of_Work.pdf](https://assam-geoint-sentinel.pages.dev/Bhu_Drishti_Assam_Proof_of_Work.pdf) *(5.54 MB • Complete 18-Figure Technological Blueprint Suite & Benchmark Reports)*
+
 **AI-Based Automated Land Use / Land Cover (LULC) Change Detection & Encroachment Monitoring Platform**  
 *Developed for North East Seva First Innovation Challenge (NESFIC 2026) — Government of Assam, Department of Science & Technology / Assam State Space Application Centre (ASSAC).*
 
