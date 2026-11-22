@@ -411,36 +411,35 @@ Intellectual Property & Open-Source Synergies:
     id: 12,
     title: '12. Resources, risks & pilot validation',
     wordCountTarget: '0/500 words',
-    actualWords: 440,
+    actualWords: 405,
     promptQuestion: 'Provide indicative development/validation resource and cost drivers, key risks and mitigations. Briefly state how the developed solution would subsequently be pilot-validated in the stated context.',
-    content: `Development & Operational Cost Drivers:
-The project budget is systematically allocated to maximize deep-tech development, rigorous ground calibration, and seamless government onboarding:
-1. Cloud & AI Compute Infrastructure (~35%): High-memory GPU instances (NVIDIA A100/H100) for transformer model training; cloud object storage for Cloud-Optimized GeoTIFF tiles; PostGIS spatial database hosting.
-2. Specialized Engineering & Research Manpower (~45%): AI/Vision researchers, GIS remote sensing specialists, and full-stack geospatial software engineers.
-3. Field Validation, Ground-Truthing & DGPS Equipment (~12%): Ground truth survey logistics across Kamrup, Nagaon, and Majuli, including mobile data verification and stakeholder workshops.
-4. Security Audits, Compliance & Documentation (~8%): Third-party VAPT testing, CERT-In compliance certification, and bilingual training manual preparation.
+    content: `Indicative Resource & Budget Allocation (₹40 Lakhs Problem Statement Grant):
+The proposed 6-month development and validation roadmap is aligned with the ₹40 Lakhs grant, strategically apportioned across five transparent expenditure heads:
+1. Software Stack & AI Development Team Cost (₹20.00 Lakhs | 50.0%): Core deep learning engineers, full-stack GIS developers, and geospatial data engineers developing the Siamese ChangeFormer pipeline, PostGIS cadastral spatial join engine, and responsive web studio.
+2. Cloud GPU Compute & SDC Infrastructure (₹8.00 Lakhs | 20.0%): GPU cluster instances (NVIDIA A100/H100) for batch model training, STAC/COG tile caching, PostGIS spatial database hosting, and Assam State Data Centre (ASDC) staging.
+3. Multi-District Field Validation, DGPS & Pilot Operations (₹6.00 Lakhs | 15.0%): On-ground DGPS verification equipment leasing, field travel, mobile surveyor provisioning, and ground data collection across pilot revenue circles and forest divisions.
+4. Third-Party CERT-In VAPT Security Audit & Compliance (₹3.20 Lakhs | 8.0%): Empaneled VAPT security audit, MeitY / State Data Centre compliance certification, and Section 65B Indian Evidence Act audit-trail validation.
+5. ASSAC Capacity Building, Training & Contingency (₹2.80 Lakhs | 7.0%): Comprehensive user manuals, SOP documentation, hands-on operator workshops for ASSAC / Revenue / Forest staff, and unforeseen operational contingency buffers.
+- Key Cost Efficiency: Zero satellite licensing expenditure (100% open-access Sentinel-1/2 data) and zero commercial GIS software licensing fees (open-source stack).
 
 Key Risks & Comprehensive Mitigation Strategies:
 - Risk: Persistent Monsoon Cloud Cover hindering optical satellite observations.
   Mitigation: Dual-sensor fusion combining Sentinel-2 optical data with all-weather, cloud-penetrating Sentinel-1 SAR (C-band) radar backscatter.
+- Risk: Spatial Misalignment of Cadastral Maps with satellite imagery.
+  Mitigation: Automated GCP affine transformation and sub-1.5m edge-matching algorithms prior to spatial join execution.
 - Risk: False Positives from Seasonal Agriculture (harvesting mistaken for land clearing).
-  Mitigation: Multi-temporal phenological curve analysis; model verifies consecutive acquisitions before triggering permanent conversion alerts.
-- Risk: Cadastral Vector Layer Inconsistencies (differing coordinate projections).
-  Mitigation: Automated spatial reprojection and geodetic alignment pipeline standardizing all layers to EPSG:4326 / UTM Zone 46N (EPSG:32646).
-- Risk: Limited Field Connectivity in Remote Circles for verification apps.
-  Mitigation: Offline-first mobile design with local SQLite caching; automatic synchronization upon reaching network coverage.
-- Risk: Inter-Departmental Adoption Inertia.
-  Mitigation: Intuitive zero-training UI; automated single-click generation of standard official PDF inspection notices with statutory citation blocks.
+  Mitigation: Multi-temporal harmonic phenological curve modeling isolating cyclical paddy harvesting from permanent land conversions.
+- Risk: Limited Field Connectivity in Remote Chars/Forests for mobile apps.
+  Mitigation: Offline-first mobile PWA design with local SQLite caching; automatic synchronization upon reaching network coverage.
 
 Proposed Pilot Validation Plan in Assam:
-The developed solution will be validated through a 3-Month Real-World Field Pilot across three representative ecological and administrative testbeds in Assam:
-1. Urban & Peri-Urban Zone (Kamrup Metropolitan): Validating detection of unauthorized hill cutting, earth filling, and rapid urban sprawl encroaching on Guwahati's natural drainage channels.
-2. Wetland & Eco-Sensitive Zone (Deepor Beel Ramsar Site): Monitoring shoreline shrinkage, unauthorized construction within the eco-fragile buffer, and water body reclamation.
-3. Riverine & Dynamic Terrain (Majuli Island / Kaziranga Buffer): Assessing seasonal riverbank erosion, silt deposition, sandbar formation, and vegetative corridor connectivity.
+The developed solution will be validated across three diverse physiographic testbeds in Assam over a 60-day period:
+1. Urban & Peri-Urban Zone (Kamrup Metropolitan): Monitoring unauthorized hill cutting and red-soil excavation in Guwahati peri-urban hills.
+2. Wetland & Eco-Sensitive Zone (Deepor Beel Ramsar Site): Monitoring shoreline shrinkage, unauthorized earth-filling, and buffer zone encroachment.
+3. Riverine & Dynamic Terrain (Majuli Island / Kaziranga Buffer): Tracking active Brahmaputra riverbank shear, embankment erosion, and sandbar (char) silt migration.
 
 Validation Success Criteria:
 - >= 88% verified correlation between automated alerts and on-ground field inspection findings.
-- Turnaround time for change detection reduced from months to under 48 hours following satellite pass.
-- Issuance of at least 25 actionable field verification dossiers to local circle officers with positive user satisfaction ratings (>= 85%).`,
+- Turnaround time for change detection reduced from months to under 48 hours following satellite pass.`,
   },
 ];
