@@ -1,10 +1,13 @@
 # Bhu-Drishti Assam (ভূ-দৃষ্টি অসম) — Assam GeoINT Sentinel
 
+[![Live Demo](https://img.shields.io/badge/Cloudflare_Pages-Live_Demo-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://assam-geoint-sentinel.pages.dev)
 [![NESFIC-D-21](https://img.shields.io/badge/NESFIC--2026-D--21%20Problem%20Statement-blue.svg)](https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-d-21)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.0-61DAFB.svg)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC.svg)](https://tailwindcss.com/)
+
+**🌐 Production Deployment:** **[https://assam-geoint-sentinel.pages.dev](https://assam-geoint-sentinel.pages.dev)**
 
 **AI-Based Automated Land Use / Land Cover (LULC) Change Detection & Encroachment Monitoring Platform**  
 *Developed for North East Seva First Innovation Challenge (NESFIC 2026) — Government of Assam, Department of Science & Technology / Assam State Space Application Centre (ASSAC).*
