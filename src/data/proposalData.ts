@@ -152,7 +152,7 @@ Step 3: Model Architecture, Training & Benchmark Optimization (Weeks 8–12)
 - Train bi-temporal ChangeFormer and Swin-UNet models on GPU clusters.
 - Evaluate models using IoU (Intersection over Union), F1-Score, and Overall Accuracy across all 8 classes.
 - Optimize inference speed using TensorRT and ONNX runtime to enable rapid regional tile inference.
-- Deliverable: Trained GeoAI model weights achieving >88% validation F1-score with published benchmark metrics.
+- Deliverable: Trained GeoAI model weights achieving Greater than 88% validation F1-score with published benchmark metrics.
 
 Step 4: Full-Stack Web GIS & Dashboard Engineering (Weeks 13–17)
 - Build responsive React/Tailwind frontend with split-view comparison slider, layer switcher, and spectral index analytics.
@@ -191,7 +191,7 @@ Phase 2: Core AI Model Engineering (Month 2: Weeks 5–8)
 - Milestones & Deliverables:
   • M2.1: Baseline Siamese ChangeFormer & Swin-UNet models trained.
   • M2.2: Cloud-penetrating SAR+Optical fusion module implemented.
-  • M2.3: Validation benchmark achieved: Macro-F1 >= 88%, Kappa >= 0.85 across test sectors.
+  • M2.3: Validation benchmark achieved: Macro-F1 Greater than or equal to  88%, Kappa Greater than or equal to  0.85 across test sectors.
 - Dependencies: High-performance GPU compute (NVIDIA A100/H100 instance availability).
 
 Phase 3: Web GIS Platform & Feature Build (Month 3: Weeks 9–12)
@@ -215,7 +215,7 @@ Phase 5: Pilot Field Validation & Tuning (Month 5: Weeks 17–20)
 - Milestones & Deliverables:
   • M5.1: Field validation exercise with Revenue/Forest ground teams.
   • M5.2: Model fine-tuning via active learning on false positives.
-  • M5.3: Validation accuracy certificate showing >= 90% real-world detection reliability.
+  • M5.3: Validation accuracy certificate showing Greater than or equal to  90% real-world detection reliability.
 - Dependencies: Coordination with district ground staff for ground-truth verification.
 
 Phase 6: Hardening, Security & Handover (Month 6: Weeks 21–24)
@@ -311,14 +311,14 @@ The system undergoes rigorous multi-tiered verification encompassing unit testin
 
 1. Automated Unit & Pipeline Tests:
 - Preprocessing verification: Assert zero radiometric drift across atmospheric correction scripts.
-- Ingestion tests: Validate tile co-registration accuracy (<0.5 pixel offset) between Sentinel-1 and Sentinel-2 acquisitions.
-- Spatial query tests: Benchmark PostGIS spatial intersection response times (<250ms for county-scale polygon overlays).
+- Ingestion tests: Validate tile co-registration accuracy (Smaller than 0.5 pixel offset) between Sentinel-1 and Sentinel-2 acquisitions.
+- Spatial query tests: Benchmark PostGIS spatial intersection response times (Smaller than 250ms for county-scale polygon overlays).
 
 2. AI Model Performance Metrics & Quality Measures:
-- Overall Accuracy (OA): Target >= 90% on test partitions across 8 LULC classes.
-- Intersection over Union (mIoU) & Dice Coefficient: Target >= 0.82 mIoU across challenging transition boundaries (e.g., Forest -> Built-up, Wetland -> Silt).
+- Overall Accuracy (OA): Target Greater than or equal to  90% on test partitions across 8 LULC classes.
+- Intersection over Union (mIoU) & Dice Coefficient: Target Greater than or equal to  0.82 mIoU across challenging transition boundaries (e.g., Forest  to  Built-up, Wetland  to  Silt).
 - Precision, Recall & Macro-F1: Monitored per class; special emphasis on minimizing false positives in seasonal agricultural harvesting.
-- Cohen’s Kappa Coefficient (kappa): Target >= 0.85, validating substantial agreement beyond chance.
+- Cohen’s Kappa Coefficient (kappa): Target Greater than or equal to  0.85, validating substantial agreement beyond chance.
 
 3. Field Ground-Truthing & Confusion Matrix Validation:
 - 500 stratified random points selected across Assam's physiographic zones (Brahmaputra alluvial plains, Karbi Anglong hill tracts, Barak Valley, Guwahati urban fringe).
@@ -351,7 +351,7 @@ Given the strategic, environmental, and legal significance of land-use data in A
 Specific Dimensions & Safeguards:
 
 1. Compliance with National Geospatial Policy (NGP 2022):
-- Fully compliant with the Ministry of Science and Technology's National Geospatial Policy 2022. Open-access satellite data (resolution >= 5m) is processed locally; any high-resolution inputs (<1m) are stored on sovereign Indian cloud infrastructure with strict access restrictions around designated negative-list sensitive installations.
+- Fully compliant with the Ministry of Science and Technology's National Geospatial Policy 2022. Open-access satellite data (resolution Greater than or equal to  5m) is processed locally; any high-resolution inputs (Smaller than 1m) are stored on sovereign Indian cloud infrastructure with strict access restrictions around designated negative-list sensitive installations.
 
 2. Role-Based Access Control (RBAC) & Authentication:
 - Multi-tier granular permission model:
@@ -400,7 +400,7 @@ Differentiation Matrix Versus Existing Alternatives:
 - Update Frequency: Conventional Desktop GIS: Every 2 to 5 years (Manual) | Global Platforms (Dynamic World): Global generic | Bhu-Drishti Assam: Automated Bi-Weekly & Monthly Cadence.
 - Assam Regional Tuning: Conventional: Generic manual spectral rules | Global: High error in wetlands & tea gardens | Bhu-Drishti Assam: Tuned specifically on Assam terrain, tea estates, & beels.
 - All-Weather Capability: Conventional: Optical only | Global: Optical only | Bhu-Drishti Assam: Optical + SAR (Sentinel-1) Multi-modal Fusion.
-- Workflow Integration: Conventional: Isolated desktop files (.shp/.tif) | Global: Generic web viewer | Bhu-Drishti Assam: End-to-End: Detection -> Alert -> PDF Enforcement Dossier.
+- Workflow Integration: Conventional: Isolated desktop files (.shp/.tif) | Global: Generic web viewer | Bhu-Drishti Assam: End-to-End: Detection  to  Alert  to  PDF Enforcement Dossier.
 - Cadastral Overlay: Conventional: Manual local file imports | Global: Unavailable | Bhu-Drishti Assam: Direct PostGIS vector overlay with boundary violation alerts.
 
 Intellectual Property & Open-Source Synergies:
@@ -439,7 +439,7 @@ The developed solution will be validated across three diverse physiographic test
 3. Riverine & Dynamic Terrain (Majuli Island / Kaziranga Buffer): Tracking active Brahmaputra riverbank shear, embankment erosion, and sandbar (char) silt migration.
 
 Validation Success Criteria:
-- >= 88% verified correlation between automated alerts and on-ground field inspection findings.
+- Greater than or equal to  88% verified correlation between automated alerts and on-ground field inspection findings.
 - Turnaround time for change detection reduced from months to under 48 hours following satellite pass.`,
   },
 ];
