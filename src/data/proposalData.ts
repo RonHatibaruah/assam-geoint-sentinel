@@ -270,12 +270,16 @@ Dependencies & Core Assumptions:
     wordCountTarget: '0/500 words',
     actualWords: 450,
     promptQuestion: 'Identify roles, relevant domain/technical expertise and indicative manpower by development phase. Highlight critical specialist skills.',
-    content: `Team Composition & Domain Leadership:
-Our multidisciplinary team unites experienced Geospatial AI researchers, remote sensing engineers, full-stack software architects, and domain advisors with direct experience in Indian geospatial workflows and Assam's regional geography.
+    content: `Lead Applicant & Legal Entity:
+- Lead Applicant: Kalyanjit Hatibaruah
+- Legal Entity: Flugelsoft Labs
+
+Team Composition & Domain Leadership:
+Flugelsoft Labs, spearheaded by Lead Applicant Kalyanjit Hatibaruah, unites experienced Geospatial AI researchers, remote sensing engineers, full-stack software architects, and domain advisors with direct experience in Indian geospatial workflows and Assam's regional geography.
 
 Key Roles & Indicative Manpower Allocation:
 
-1. Project Lead & Geospatial AI Architect (1 FTE — Full Project Duration):
+1. Project Director & Lead Applicant — Kalyanjit Hatibaruah (1 FTE — Full Project Duration):
 - Expertise: M.Tech/Ph.D. in Remote Sensing / Computer Science; 10+ years specializing in deep learning for Earth observation, multi-modal satellite fusion, and enterprise architecture.
 - Responsibilities: System architecture, algorithm design, stakeholder alignment with ASSAC/DST, and overall delivery governance.
 

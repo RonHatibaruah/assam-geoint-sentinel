@@ -79,7 +79,7 @@ export function App() {
       <footer className="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-600 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="font-medium text-slate-700">
-            © 2026 Bhu-Drishti Assam • Developed for NESFIC-D-21 • Department of Science & Technology / ASSAC, Govt. of Assam
+            © 2026 Flugelsoft Labs. All Rights Reserved. • Lead Applicant: Kalyanjit Hatibaruah • Legal Entity: Flugelsoft Labs • Bhu-Drishti Assam • Developed for NESFIC-D-21 • Department of Science & Technology / ASSAC, Govt. of Assam
           </p>
           <div className="flex items-center space-x-4 text-[11px] text-slate-500 font-mono">
             <span>Copernicus Open Access Sentinel-1/2</span>

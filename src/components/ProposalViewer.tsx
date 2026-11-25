@@ -46,7 +46,7 @@ export const ProposalViewer: React.FC = () => {
         <div>
           <div className="flex items-center space-x-2 text-amber-700 text-xs font-bold uppercase tracking-wider mb-1">
             <Award className="w-4 h-4" />
-            <span>Official Grant Proposal Dossier • NESFIC 2026</span>
+            <span>Official Grant Proposal Dossier • Lead Applicant: Kalyanjit Hatibaruah • Legal Entity: Flugelsoft Labs • NESFIC 2026</span>
           </div>
           <h2 className="text-xl md:text-2xl font-black text-slate-900">
             NESFIC-D-21 Proposal Submission Contents

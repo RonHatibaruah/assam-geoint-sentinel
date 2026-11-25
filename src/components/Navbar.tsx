@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, alertCo
             <span>Sentinel-1/2 Live Feed: ONLINE</span>
           </span>
           <span className="bg-slate-100 text-slate-700 text-[11px] font-semibold px-2 py-0.5 rounded border border-slate-300">
-            NESFIC-D-21
+            NESFIC-D-21 • Flugelsoft Labs
           </span>
         </div>
       </div>

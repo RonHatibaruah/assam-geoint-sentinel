@@ -37,7 +37,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
-              <span>NESFIC-D-21 Solution Prototype • ASSAC / DST Assam</span>
+              <span>NESFIC-D-21 • Lead Applicant: Kalyanjit Hatibaruah (Flugelsoft Labs) • ASSAC / DST Assam</span>
             </div>
             <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
               Statewide Automated LULC Intelligence & Change Sentinel
