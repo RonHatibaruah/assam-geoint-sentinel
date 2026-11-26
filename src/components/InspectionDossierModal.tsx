@@ -38,28 +38,28 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-3xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-950/70 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-3xl bg-gray-50 border border-gray-300 rounded-2xl shadow-2xl overflow-hidden my-8">
         {/* Action Header */}
-        <div className="bg-slate-50 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between text-xs">
-          <div className="flex items-center space-x-2 text-slate-700">
-            <span className="font-mono text-emerald-700 font-bold">
+        <div className="bg-gray-200 px-6 py-3.5 border-b border-gray-300 flex items-center justify-between text-xs">
+          <div className="flex items-center space-x-2 text-gray-700">
+            <span className="font-mono text-emerald-800 font-bold">
               {alert.id}
             </span>
-            <span className="text-slate-300">|</span>
-            <span className="font-medium">Geospatial Inspection Dossier (Statutory Notice Format)</span>
+            <span className="text-gray-400">|</span>
+            <span className="font-medium text-gray-900">Geospatial Inspection Dossier (Statutory Notice Format)</span>
           </div>
           <div className="flex items-center space-x-2">
             <button
               onClick={handlePrint}
-              className="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-medium flex items-center space-x-1.5 transition-colors shadow-sm"
+              className="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-white text-gray-700 border border-gray-300 font-medium flex items-center space-x-1.5 transition-colors shadow-xs"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print Dossier</span>
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-500 hover:text-slate-800 border border-slate-200 transition-colors shadow-sm"
+              className="p-1.5 rounded-lg bg-gray-100 hover:bg-white text-gray-500 hover:text-gray-800 border border-gray-300 transition-colors shadow-xs"
             >
               <X className="w-4 h-4" />
             </button>
@@ -67,18 +67,18 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
         </div>
 
         {/* Official Printable Document Content */}
-        <div className="p-8 space-y-6 text-slate-800 print:text-black print:bg-white text-xs">
+        <div className="p-8 space-y-6 text-gray-800 print:text-black print:bg-white text-xs">
           {/* Document Letterhead */}
-          <div className="text-center border-b border-slate-200 pb-5 space-y-1">
+          <div className="text-center border-b border-gray-300 pb-5 space-y-1">
             <div className="flex justify-center mb-1">
-              <span className="px-3 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold text-[10px] uppercase tracking-wider">
+              <span className="px-3 py-0.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold text-[10px] uppercase tracking-wider">
                 Government of Assam • Statutory Land Administration Notice
               </span>
             </div>
-            <h1 className="text-lg font-black text-slate-900 tracking-wide">
+            <h1 className="text-lg font-black text-gray-900 tracking-wide">
               ASSAM STATE SPACE APPLICATION CENTRE (ASSAC)
             </h1>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-[11px] text-gray-600">
               Department of Science & Technology, Government of Assam • Bigyan Bhawan, GS Road, Guwahati
             </p>
             <p className="text-[10px] font-mono text-amber-800 font-semibold">
@@ -87,12 +87,12 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
           </div>
 
           {/* Recipient Circle Officer */}
-          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+          <div className="bg-gray-100 p-4 rounded-xl border border-gray-300 space-y-1">
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">To The Designated Enforcement Authority:</span>
-                <p className="font-bold text-slate-900 text-sm mt-0.5">{alert.assignedOfficer}</p>
-                <p className="text-slate-600">{alert.circle}, District: {alert.district}, Assam</p>
+                <span className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">To The Designated Enforcement Authority:</span>
+                <p className="font-bold text-gray-900 text-sm mt-0.5">{alert.assignedOfficer}</p>
+                <p className="text-gray-600">{alert.circle}, District: {alert.district}, Assam</p>
               </div>
               <div className="text-right">
                 <span className={`px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider ${
@@ -106,50 +106,50 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
 
           {/* Subject Line */}
           <div>
-            <p className="font-bold text-slate-900 text-sm">
+            <p className="font-bold text-gray-900 text-sm">
               <span className="underline">Subject:</span> Immediate Field Verification Injunction against Unauthorized Land-Cover Conversion ({alert.title})
             </p>
-            <p className="text-slate-500 italic text-[11px] mt-0.5">
+            <p className="text-gray-500 italic text-[11px] mt-0.5">
               বিষয়: উপগ্ৰহ সংকেতৰ ভিত্তিত চিনাক্ত কৰা ভূ-ৰূপান্তৰ / পাহাৰ কটাৰ তদন্ত আৰু ব্যৱস্থা গ্ৰহণ জাননী
             </p>
           </div>
 
           {/* Technical Findings Grid */}
-          <div className="border border-slate-200 rounded-xl overflow-hidden">
-            <div className="bg-slate-50 px-4 py-2 border-b border-slate-200 font-bold text-slate-900 text-xs flex justify-between items-center">
+          <div className="border border-gray-300 rounded-xl overflow-hidden">
+            <div className="bg-gray-200 px-4 py-2 border-b border-gray-300 font-bold text-gray-900 text-xs flex justify-between items-center">
               <span>Section 1: Automated Earth Observation Sensor Diagnostics</span>
-              <span className="text-emerald-700 font-mono text-[11px]">AI Confidence: {alert.confidence}%</span>
+              <span className="text-emerald-800 font-mono text-[11px]">AI Confidence: {alert.confidence}%</span>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-slate-200 text-xs">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-gray-300 text-xs">
               <div className="p-3">
-                <span className="text-slate-500 block text-[10px]">Cadastral Parcel:</span>
+                <span className="text-gray-500 block text-[10px]">Cadastral Parcel:</span>
                 <span className="font-mono text-amber-800 font-bold">{alert.cadastralPlot}</span>
               </div>
               <div className="p-3">
-                <span className="text-slate-500 block text-[10px]">Centroid Coordinates:</span>
-                <span className="font-mono text-slate-800 font-bold">{alert.coordinates[0].toFixed(4)}°N, {alert.coordinates[1].toFixed(4)}°E</span>
+                <span className="text-gray-500 block text-[10px]">Centroid Coordinates:</span>
+                <span className="font-mono text-gray-800 font-bold">{alert.coordinates[0].toFixed(4)}°N, {alert.coordinates[1].toFixed(4)}°E</span>
               </div>
               <div className="p-3">
-                <span className="text-slate-500 block text-[10px]">Area Altered:</span>
+                <span className="text-gray-500 block text-[10px]">Area Altered:</span>
                 <span className="font-mono text-rose-600 font-bold">
                   {alert.affectedAreaHectares} ha ({(alert.affectedAreaHectares * 7.47).toFixed(1)} Bighas)
                 </span>
               </div>
               <div className="p-3">
-                <span className="text-slate-500 block text-[10px]">Satellites Used:</span>
-                <span className="font-mono text-slate-800">{alert.satelliteSensor}</span>
+                <span className="text-gray-500 block text-[10px]">Satellites Used:</span>
+                <span className="font-mono text-gray-800">{alert.satelliteSensor}</span>
               </div>
             </div>
           </div>
 
           {/* Spectral Index Transition Comparison Table */}
-          <div className="border border-slate-200 rounded-xl overflow-hidden">
-            <div className="bg-slate-50 px-4 py-2 border-b border-slate-200 font-bold text-slate-900 text-xs">
+          <div className="border border-gray-300 rounded-xl overflow-hidden">
+            <div className="bg-gray-200 px-4 py-2 border-b border-gray-300 font-bold text-gray-900 text-xs">
               Section 2: Biophysical Index Radiometric Shift
             </div>
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50 text-slate-600 border-b border-slate-200">
+              <thead className="bg-gray-100 text-gray-600 border-b border-gray-300">
                 <tr>
                   <th className="p-2.5">Biophysical Index</th>
                   <th className="p-2.5">Pre-Change Baseline</th>
@@ -158,27 +158,27 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
                   <th className="p-2.5">Inference Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-slate-700">
+              <tbody className="divide-y divide-gray-200 text-gray-700">
                 <tr>
-                  <td className="p-2.5 font-semibold text-slate-900">NDVI (Vegetation Index)</td>
-                  <td className="p-2.5 font-mono text-emerald-700 font-medium">+{alert.ndviBefore.toFixed(2)}</td>
+                  <td className="p-2.5 font-semibold text-gray-900">NDVI (Vegetation Index)</td>
+                  <td className="p-2.5 font-mono text-emerald-800 font-medium">+{alert.ndviBefore.toFixed(2)}</td>
                   <td className="p-2.5 font-mono text-rose-600 font-medium">+{alert.ndviAfter.toFixed(2)}</td>
                   <td className="p-2.5 font-mono text-rose-600 font-bold">{(alert.ndviAfter - alert.ndviBefore).toFixed(2)}</td>
                   <td className="p-2.5 text-rose-600 font-semibold">Critical Canopy Removal</td>
                 </tr>
                 <tr>
-                  <td className="p-2.5 font-semibold text-slate-900">NDBI (Built-up / Bare Soil)</td>
-                  <td className="p-2.5 font-mono text-slate-600">{alert.ndbiBefore.toFixed(2)}</td>
-                  <td className="p-2.5 font-mono text-amber-700 font-medium">+{alert.ndbiAfter.toFixed(2)}</td>
-                  <td className="p-2.5 font-mono text-amber-700 font-bold">+{(alert.ndbiAfter - alert.ndbiBefore).toFixed(2)}</td>
-                  <td className="p-2.5 text-amber-700 font-semibold">High Impervious Exposure</td>
+                  <td className="p-2.5 font-semibold text-gray-900">NDBI (Built-up / Bare Soil)</td>
+                  <td className="p-2.5 font-mono text-gray-600">{alert.ndbiBefore.toFixed(2)}</td>
+                  <td className="p-2.5 font-mono text-amber-800 font-medium">+{alert.ndbiAfter.toFixed(2)}</td>
+                  <td className="p-2.5 font-mono text-amber-800 font-bold">+{(alert.ndbiAfter - alert.ndbiBefore).toFixed(2)}</td>
+                  <td className="p-2.5 text-amber-800 font-semibold">High Impervious Exposure</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           {/* Statutory Directive & Action Mandate */}
-          <div className="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200 space-y-2 text-slate-700">
+          <div className="p-3.5 rounded-xl bg-gray-100 border border-gray-300 space-y-2 text-gray-700">
             <p className="font-bold text-amber-900 flex items-center space-x-1.5">
               <AlertTriangle className="w-3.5 h-3.5 text-amber-700" />
               <span>Mandatory Administrative Action Directive:</span>
@@ -189,35 +189,35 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
           </div>
 
           {/* Signatures & QR Geo-Verification */}
-          <div className="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <div className="pt-4 border-t border-gray-300 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="p-2 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">
-                <QrCode className="w-10 h-10 text-emerald-700" />
+              <div className="p-2 rounded-lg bg-gray-100 border border-gray-300 text-gray-700 shadow-xs">
+                <QrCode className="w-10 h-10 text-emerald-800" />
               </div>
-              <div className="text-[10px] text-slate-500">
-                <span className="font-mono text-slate-800 block font-bold">ASSAC-GEO-HASH: 91E-26N-415B</span>
+              <div className="text-[10px] text-gray-500">
+                <span className="font-mono text-gray-800 block font-bold">ASSAC-GEO-HASH: 91E-26N-415B</span>
                 Scan to verify ground coordinates on official Revenue Field App
               </div>
             </div>
 
             <div className="text-right">
-              <p className="font-bold text-slate-900 text-xs">For Director, ASSAC</p>
-              <p className="text-[10px] text-slate-500">Remote Sensing & GIS Analytics Division</p>
-              <p className="text-[10px] text-emerald-700 font-mono mt-0.5 font-semibold">Digitally Authenticated (NESFIC-D-21)</p>
+              <p className="font-bold text-gray-900 text-xs">For Director, ASSAC</p>
+              <p className="text-[10px] text-gray-500">Remote Sensing & GIS Analytics Division</p>
+              <p className="text-[10px] text-emerald-800 font-mono mt-0.5 font-semibold">Digitally Authenticated (NESFIC-D-21)</p>
             </div>
           </div>
         </div>
 
         {/* Modal Bottom Controls */}
-        <div className="bg-slate-50 px-6 py-4 border-t border-slate-200 flex items-center justify-between">
-          <div className="text-xs text-slate-600">
-            Current Status: <strong className={issued ? 'text-emerald-700' : 'text-amber-800'}>{issued ? 'NOTICE DISPATCHED' : alert.status}</strong>
+        <div className="bg-gray-200 px-6 py-4 border-t border-gray-300 flex items-center justify-between">
+          <div className="text-xs text-gray-600">
+            Current Status: <strong className={issued ? 'text-emerald-800' : 'text-amber-800'}>{issued ? 'NOTICE DISPATCHED' : alert.status}</strong>
           </div>
 
           <div className="flex items-center space-x-3">
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-semibold text-xs transition-colors shadow-sm"
+              className="px-4 py-2 rounded-xl bg-gray-100 hover:bg-white text-gray-700 border border-gray-300 font-semibold text-xs transition-colors shadow-xs"
             >
               Close
             </button>
@@ -226,8 +226,8 @@ export const InspectionDossierModal: React.FC<InspectionDossierModalProps> = ({ 
               disabled={issued}
               className={`px-5 py-2 rounded-xl font-bold text-xs transition-all flex items-center space-x-2 ${
                 issued 
-                  ? 'bg-emerald-600 text-white cursor-default' 
-                  : 'bg-rose-600 hover:bg-rose-700 text-white shadow-sm'
+                  ? 'bg-emerald-700 text-white cursor-default' 
+                  : 'bg-rose-600 hover:bg-rose-700 text-white shadow-xs'
               }`}
             >
               <CheckCircle2 className="w-4 h-4" />

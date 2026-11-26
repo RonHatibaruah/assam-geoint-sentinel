@@ -172,22 +172,22 @@ export const GalleryView: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-gray-50 border border-gray-300 rounded-2xl p-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-1">
             <Sparkles className="w-4 h-4" />
             <span>High-Impact 16:9 Widescreen Framework Infographics</span>
           </div>
-          <h2 className="text-xl md:text-2xl font-black text-slate-900">
+          <h2 className="text-xl md:text-2xl font-black text-gray-900">
             Proposal Supporting Evidence & Infographics Gallery
           </h2>
-          <p className="text-xs text-slate-600 mt-1 max-w-2xl leading-relaxed">
+          <p className="text-xs text-gray-600 mt-1 max-w-2xl leading-relaxed">
             All 18 technological framework infographics generated in 16:9 widescreen blueprint aesthetic for direct inclusion in the NESFIC-D-21 Proposal Evidence PDF.
           </p>
         </div>
 
         <div className="flex items-center space-x-2 text-xs">
-          <span className="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 font-mono font-bold">
+          <span className="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 font-mono font-bold">
             18 / 18 Frameworks Ready
           </span>
         </div>
@@ -198,12 +198,12 @@ export const GalleryView: React.FC = () => {
         {INFOGRAPHICS.map((item) => (
           <div
             key={item.id}
-            className="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-emerald-400 transition-all flex flex-col justify-between"
+            className="group bg-gray-50 border border-gray-300 rounded-2xl overflow-hidden shadow-xs hover:border-gray-500 transition-all flex flex-col justify-between"
           >
             <div>
               {/* Image Container with Fallback */}
               <div 
-                className="relative aspect-video bg-slate-100 overflow-hidden cursor-pointer"
+                className="relative aspect-video bg-gray-200 overflow-hidden cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
                 <img
@@ -220,22 +220,22 @@ export const GalleryView: React.FC = () => {
                   }}
                 />
                 <div 
-                  className="w-full h-full items-center justify-center bg-slate-100 border border-slate-200 text-slate-500 p-6 text-center text-xs space-y-2 hidden"
+                  className="w-full h-full items-center justify-center bg-gray-100 border border-gray-300 text-gray-500 p-6 text-center text-xs space-y-2 hidden"
                 >
                   <div className="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto animate-pulse">
                     <Layers className="w-5 h-5" />
                   </div>
-                  <p className="font-semibold text-slate-700">{item.figureLabel}: {item.title}</p>
-                  <p className="text-[11px] text-slate-500">Autonomous generation pipeline active...</p>
+                  <p className="font-semibold text-gray-700">{item.figureLabel}: {item.title}</p>
+                  <p className="text-[11px] text-gray-500">Autonomous generation pipeline active...</p>
                 </div>
 
-                <div className="absolute top-3 left-3 bg-white/95 border border-slate-200 px-2.5 py-1 rounded-md text-[11px] font-mono text-emerald-800 font-bold backdrop-blur-sm shadow-sm">
+                <div className="absolute top-3 left-3 bg-gray-100/95 border border-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono text-gray-800 font-bold backdrop-blur-sm shadow-xs">
                   {item.figureLabel}
                 </div>
 
                 <button 
                   onClick={() => setSelectedImage(item)}
-                  className="absolute bottom-3 right-3 p-2 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 border border-slate-200 shadow-md backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute bottom-3 right-3 p-2 rounded-lg bg-gray-100/90 hover:bg-white text-gray-700 hover:text-gray-900 border border-gray-300 shadow-xs backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Maximize2 className="w-4 h-4" />
                 </button>
@@ -243,27 +243,27 @@ export const GalleryView: React.FC = () => {
 
               {/* Card Meta Content */}
               <div className="p-5 space-y-2.5">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-amber-700 font-semibold">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-amber-800 font-semibold">
                   {item.targetSection}
                 </div>
-                <h3 className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-sm font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
             </div>
 
             {/* Card Footer Actions */}
-            <div className="p-4 pt-0 border-t border-slate-100 flex items-center justify-between text-xs mt-2">
-              <span className="font-mono text-[11px] text-slate-500">
+            <div className="p-4 pt-0 border-t border-gray-200 flex items-center justify-between text-xs mt-2">
+              <span className="font-mono text-[11px] text-gray-500">
                 {item.filename}
               </span>
               <a
                 href={`/assets/images/${item.filename}`}
                 download={item.filename}
-                className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-600 text-slate-700 hover:text-white border border-slate-200 font-medium flex items-center space-x-1.5 transition-colors shadow-sm"
+                className="px-3 py-1.5 rounded-lg bg-gray-200 hover:bg-gray-800 text-gray-700 hover:text-white border border-gray-300 font-medium flex items-center space-x-1.5 transition-colors shadow-xs"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Save Image</span>
@@ -275,14 +275,14 @@ export const GalleryView: React.FC = () => {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
-          <div className="relative max-w-5xl w-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xl">
-            <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-950/70 backdrop-blur-md">
+          <div className="relative max-w-5xl w-full bg-gray-50 border border-gray-300 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="p-4 bg-gray-200 border-b border-gray-300 flex items-center justify-between">
               <div>
-                <span className="text-xs font-mono text-emerald-700 font-bold mr-2">
+                <span className="text-xs font-mono text-emerald-800 font-bold mr-2">
                   {selectedImage.figureLabel}
                 </span>
-                <span className="text-xs text-slate-800 font-bold">
+                <span className="text-xs text-gray-900 font-bold">
                   {selectedImage.title}
                 </span>
               </div>
@@ -290,25 +290,25 @@ export const GalleryView: React.FC = () => {
                 <a
                   href={`/assets/images/${selectedImage.filename}`}
                   download={selectedImage.filename}
-                  className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center space-x-1 shadow-sm"
+                  className="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-900 text-white font-bold text-xs flex items-center space-x-1 shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Download High-Res</span>
                 </a>
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-medium text-xs transition-colors"
+                  className="px-3 py-1.5 rounded-lg bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium text-xs transition-colors"
                 >
                   Close
                 </button>
               </div>
             </div>
 
-            <div className="p-4 bg-slate-100 flex items-center justify-center max-h-[75vh] overflow-hidden">
+            <div className="p-4 bg-gray-100 flex items-center justify-center max-h-[75vh] overflow-hidden">
               <img
                 src={`/assets/images/${selectedImage.filename}`}
                 alt={selectedImage.title}
-                className="max-h-[70vh] w-auto object-contain rounded-lg shadow-lg border border-slate-200"
+                className="max-h-[70vh] w-auto object-contain rounded-lg shadow-lg border border-gray-300"
               />
             </div>
           </div>

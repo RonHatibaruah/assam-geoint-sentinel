@@ -135,21 +135,21 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
   return (
     <div className="space-y-4">
       {/* Top Filter & Hotspot Header */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+      <div className="bg-gray-50 border border-gray-300 rounded-xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600">
+          <div className="p-2.5 rounded-lg bg-gray-200 border border-gray-300 text-gray-800">
             <Compass className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <h2 className="text-base font-bold text-slate-900">
+              <h2 className="text-base font-bold text-gray-900">
                 Bi-Temporal Change Studio
               </h2>
-              <span className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono">
+              <span className="text-xs px-2 py-0.5 rounded bg-gray-200 text-gray-800 border border-gray-300 font-mono">
                 EPSG:32646 (UTM 46N)
               </span>
             </div>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               Synchronized curtain split-view comparing baseline ({selectedHotspot.baselineYear}) vs current observation ({selectedHotspot.currentYear})
             </p>
           </div>
@@ -157,7 +157,7 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
 
         {/* Hotspot Dropdown Selector */}
         <div className="flex items-center space-x-3 w-full md:w-auto">
-          <label className="text-xs font-semibold text-slate-600 whitespace-nowrap">
+          <label className="text-xs font-semibold text-gray-700 whitespace-nowrap">
             Target Sector:
           </label>
           <select
@@ -166,7 +166,7 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
               const found = ASSAM_HOTSPOTS.find(h => h.id === e.target.value);
               if (found) onSelectHotspot(found);
             }}
-            className="w-full md:w-72 bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-emerald-500 shadow-sm"
+            className="w-full md:w-72 bg-gray-100 border border-gray-300 rounded-lg px-3 py-2 text-xs font-medium text-gray-900 focus:outline-none focus:border-gray-500 shadow-xs"
           >
             {ASSAM_HOTSPOTS.map((h) => (
               <option key={h.id} value={h.id}>
@@ -182,18 +182,18 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
         {/* Map Area (3 cols) */}
         <div className="lg:col-span-3 space-y-3">
           {/* Layer Mode Switcher Bar */}
-          <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex flex-wrap items-center justify-between gap-2 text-xs shadow-sm">
+          <div className="bg-gray-50 border border-gray-300 rounded-xl p-2.5 flex flex-wrap items-center justify-between gap-2 text-xs shadow-sm">
             <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 md:pb-0">
-              <span className="text-slate-500 font-semibold px-2 flex items-center">
-                <Layers className="w-3.5 h-3.5 mr-1 text-slate-500" />
+              <span className="text-gray-600 font-semibold px-2 flex items-center">
+                <Layers className="w-3.5 h-3.5 mr-1 text-gray-600" />
                 Mode:
               </span>
               <button
                 onClick={() => setLayerMode('lulc-mask')}
                 className={`px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
                   layerMode === 'lulc-mask'
-                    ? 'bg-emerald-600 text-white font-bold shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-gray-800 text-white font-bold shadow-xs'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
                 8-Class LULC Mask
@@ -202,8 +202,8 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
                 onClick={() => setLayerMode('change-heatmap')}
                 className={`px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
                   layerMode === 'change-heatmap'
-                    ? 'bg-rose-600 text-white font-bold shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-rose-700 text-white font-bold shadow-xs'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
                 Change Anomaly Heatmap
@@ -212,8 +212,8 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
                 onClick={() => setLayerMode('sar-radar')}
                 className={`px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
                   layerMode === 'sar-radar'
-                    ? 'bg-amber-600 text-white font-bold shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-amber-700 text-white font-bold shadow-xs'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
                 Sentinel-1 SAR Radar (Monsoon)
@@ -222,8 +222,8 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
                 onClick={() => setLayerMode('cir-infrared')}
                 className={`px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
                   layerMode === 'cir-infrared'
-                    ? 'bg-purple-600 text-white font-bold shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-purple-700 text-white font-bold shadow-xs'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
                 False Color Infrared (CIR)
@@ -232,8 +232,8 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
                 onClick={() => setLayerMode('true-color')}
                 className={`px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
                   layerMode === 'true-color'
-                    ? 'bg-sky-600 text-white font-bold shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-sky-700 text-white font-bold shadow-xs'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
                 True Color RGB
@@ -242,7 +242,7 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
 
             <button
               onClick={() => setShowLegend(!showLegend)}
-              className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 flex items-center space-x-1"
+              className="px-2.5 py-1 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 flex items-center space-x-1"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>{showLegend ? 'Hide Legend' : 'Show Legend'}</span>
@@ -250,20 +250,20 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
           </div>
 
           {/* Interactive Map Viewport with Split Curtain */}
-          <div className="relative h-[540px] rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
+          <div className="relative h-[540px] rounded-2xl overflow-hidden border border-gray-300 shadow-sm bg-gray-200">
             {/* Real Leaflet Map */}
             <div ref={mapContainerRef} className="w-full h-full z-0" />
 
             {/* Split Curtain Overlay Visualizer */}
             <div 
-              className="absolute inset-y-0 left-0 pointer-events-none transition-all z-10 overflow-hidden border-r-2 border-emerald-500 shadow-2xl"
+              className="absolute inset-y-0 left-0 pointer-events-none transition-all z-10 overflow-hidden border-r-2 border-gray-600 shadow-xl"
               style={{ width: `${sliderPos}%` }}
             >
               <div 
                 className="w-full h-full opacity-40 mix-blend-color-burn"
                 style={{
                   background: layerMode === 'lulc-mask' 
-                    ? 'linear-gradient(135deg, rgba(21, 128, 61, 0.6) 0%, rgba(239, 68, 68, 0.7) 100%)'
+                    ? 'linear-gradient(135deg, rgba(31, 41, 55, 0.6) 0%, rgba(239, 68, 68, 0.7) 100%)'
                     : layerMode === 'change-heatmap'
                     ? 'radial-gradient(circle at 60% 40%, rgba(225, 29, 72, 0.8) 0%, transparent 70%)'
                     : layerMode === 'sar-radar'
@@ -274,13 +274,13 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
                 }}
               />
               {/* Baseline Badge */}
-              <div className="absolute top-4 left-4 bg-white/95 border border-slate-200 text-emerald-800 font-mono text-xs px-2.5 py-1 rounded shadow-md backdrop-blur-sm font-semibold">
+              <div className="absolute top-4 left-4 bg-gray-100/95 border border-gray-300 text-gray-800 font-mono text-xs px-2.5 py-1 rounded shadow-xs backdrop-blur-sm font-semibold">
                 BASELINE: {selectedHotspot.baselineYear} (NRSC Reference)
               </div>
             </div>
 
             {/* Current Observation Badge on Right Side */}
-            <div className="absolute top-4 right-4 bg-white/95 border border-slate-200 text-rose-700 font-mono text-xs px-2.5 py-1 rounded shadow-md backdrop-blur-sm z-20 font-semibold">
+            <div className="absolute top-4 right-4 bg-gray-100/95 border border-gray-300 text-rose-800 font-mono text-xs px-2.5 py-1 rounded shadow-xs backdrop-blur-sm z-20 font-semibold">
               OBSERVATION: {selectedHotspot.currentYear} (Sentinel-1/2 AI Mask)
             </div>
 
@@ -289,23 +289,23 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
               className="absolute inset-y-0 z-30 pointer-events-none flex items-center justify-center"
               style={{ left: `calc(${sliderPos}% - 14px)` }}
             >
-              <div className="w-7 h-12 rounded-full bg-white border-2 border-emerald-600 shadow-xl flex items-center justify-center text-emerald-600 cursor-ew-resize pointer-events-auto">
+              <div className="w-7 h-12 rounded-full bg-gray-800 border-2 border-gray-400 shadow-lg flex items-center justify-center text-white cursor-ew-resize pointer-events-auto">
                 <Sliders className="w-3.5 h-3.5" />
               </div>
             </div>
 
             {/* Floating Legend Overlay */}
             {showLegend && (
-              <div className="absolute bottom-4 left-4 z-20 bg-white/95 border border-slate-200 rounded-xl p-3 max-w-xs shadow-xl backdrop-blur-md">
-                <div className="flex items-center justify-between text-xs font-bold text-slate-900 mb-2">
+              <div className="absolute bottom-4 left-4 z-20 bg-gray-100/95 border border-gray-300 rounded-xl p-3 max-w-xs shadow-lg backdrop-blur-md">
+                <div className="flex items-center justify-between text-xs font-bold text-gray-900 mb-2">
                   <span>NRSC/ASSAC 8 LULC Classes</span>
-                  <span className="text-[10px] text-slate-500">Legend</span>
+                  <span className="text-[10px] text-gray-600">Legend</span>
                 </div>
                 <div className="grid grid-cols-2 gap-1.5 text-[11px]">
                   {LULC_CLASSES.map((c) => (
                     <div key={c.id} className="flex items-center space-x-1.5">
                       <span className="w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ backgroundColor: c.color }} />
-                      <span className="text-slate-700 truncate" title={c.name}>{c.name}</span>
+                      <span className="text-gray-800 truncate" title={c.name}>{c.name}</span>
                     </div>
                   ))}
                 </div>
@@ -316,7 +316,7 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
             <div className="absolute bottom-4 right-4 z-20 flex items-center space-x-2">
               <button
                 onClick={() => onOpenDossier(matchingAlert)}
-                className="px-3.5 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs shadow-lg flex items-center space-x-2 transition-transform hover:scale-105"
+                className="px-3.5 py-2 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs shadow-sm flex items-center space-x-2 transition-transform hover:scale-105"
               >
                 <FileCheck className="w-4 h-4" />
                 <span>Issue Field Verification Notice</span>
@@ -325,8 +325,8 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
           </div>
 
           {/* Draggable Slider Control Bar */}
-          <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center space-x-4 text-xs shadow-sm">
-            <span className="font-semibold text-slate-600 whitespace-nowrap">
+          <div className="bg-gray-50 border border-gray-300 rounded-xl p-3 flex items-center space-x-4 text-xs shadow-sm">
+            <span className="font-semibold text-gray-700 whitespace-nowrap">
               Curtain Swipe Position:
             </span>
             <input
@@ -335,9 +335,9 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
               max="100"
               value={sliderPos}
               onChange={(e) => setSliderPos(Number(e.target.value))}
-              className="w-full accent-emerald-600 cursor-pointer h-2 bg-slate-200 rounded-lg"
+              className="w-full accent-gray-800 cursor-pointer h-2 bg-gray-300 rounded-lg"
             />
-            <span className="font-mono text-emerald-700 font-bold w-12 text-right">
+            <span className="font-mono text-gray-900 font-bold w-12 text-right">
               {sliderPos}%
             </span>
           </div>
@@ -346,106 +346,106 @@ export const MapStudioView: React.FC<MapStudioViewProps> = ({
         {/* Sidebar: Zonal Statistics & Spectral Index Inspector (1 col) */}
         <div className="space-y-4">
           {/* Target Sector Summary Card */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-3">
+          <div className="bg-gray-50 border border-gray-300 rounded-xl p-4 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                selectedHotspot.severity === 'Critical' ? 'bg-rose-100 text-rose-700 border border-rose-200' : 'bg-amber-100 text-amber-800 border border-amber-200'
+                selectedHotspot.severity === 'Critical' ? 'bg-rose-100 text-rose-800 border border-rose-300' : 'bg-amber-100 text-amber-900 border border-amber-300'
               }`}>
                 {selectedHotspot.severity} Threat
               </span>
-              <span className="text-xs font-mono text-emerald-700 font-bold">
+              <span className="text-xs font-mono text-emerald-800 font-bold">
                 Conf: {selectedHotspot.confidenceScore}%
               </span>
             </div>
 
-            <h3 className="text-sm font-bold text-slate-900">
+            <h3 className="text-sm font-bold text-gray-900">
               {selectedHotspot.name}
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-gray-600 leading-relaxed">
               {selectedHotspot.description}
             </p>
 
-            <div className="pt-2 border-t border-slate-100 text-xs space-y-1.5">
-              <div className="flex justify-between text-slate-600">
+            <div className="pt-2 border-t border-gray-200 text-xs space-y-1.5">
+              <div className="flex justify-between text-gray-700">
                 <span>District:</span>
-                <strong className="text-slate-800">{selectedHotspot.district}</strong>
+                <strong className="text-gray-900">{selectedHotspot.district}</strong>
               </div>
-              <div className="flex justify-between text-slate-600">
+              <div className="flex justify-between text-gray-700">
                 <span>Revenue Circle:</span>
-                <strong className="text-slate-800">{selectedHotspot.circle}</strong>
+                <strong className="text-gray-900">{selectedHotspot.circle}</strong>
               </div>
-              <div className="flex justify-between text-slate-600">
+              <div className="flex justify-between text-gray-700">
                 <span>Area Delta:</span>
-                <strong className="text-rose-600 font-mono font-bold">Δ {selectedHotspot.areaDeltaHectares} ha</strong>
+                <strong className="text-rose-700 font-mono font-bold">Δ {selectedHotspot.areaDeltaHectares} ha</strong>
               </div>
-              <div className="flex justify-between text-slate-600">
+              <div className="flex justify-between text-gray-700">
                 <span>Dominant Transition:</span>
               </div>
-              <div className="text-[11px] text-amber-900 bg-amber-50 p-2 rounded border border-amber-200 font-mono font-semibold">
+              <div className="text-[11px] text-gray-900 bg-gray-200/90 p-2 rounded border border-gray-300 font-mono font-semibold">
                 {selectedHotspot.dominantTransition}
               </div>
             </div>
           </div>
 
           {/* Spectral Index Tensor Readings */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-3">
+          <div className="bg-gray-50 border border-gray-300 rounded-xl p-4 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
-              <h4 className="text-xs font-bold text-slate-900 flex items-center space-x-1.5">
-                <Activity className="w-3.5 h-3.5 text-emerald-600" />
+              <h4 className="text-xs font-bold text-gray-900 flex items-center space-x-1.5">
+                <Activity className="w-3.5 h-3.5 text-gray-700" />
                 <span>Spectral Index Probe</span>
               </h4>
-              <span className="text-[10px] text-slate-500">Live Pixel Tensor</span>
+              <span className="text-[10px] text-gray-600">Live Pixel Tensor</span>
             </div>
 
             <div className="space-y-2 text-xs">
               {/* NDVI */}
               <div>
                 <div className="flex justify-between text-[11px] mb-1">
-                  <span className="text-slate-600 font-medium">NDVI (Vegetation Vigor)</span>
-                  <span className="font-mono text-rose-600 font-bold">{selectedHotspot.ndviDelta > 0 ? `+${selectedHotspot.ndviDelta}` : selectedHotspot.ndviDelta}</span>
+                  <span className="text-gray-700 font-medium">NDVI (Vegetation Vigor)</span>
+                  <span className="font-mono text-rose-700 font-bold">{selectedHotspot.ndviDelta > 0 ? `+${selectedHotspot.ndviDelta}` : selectedHotspot.ndviDelta}</span>
                 </div>
-                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-emerald-500 h-full rounded-full" style={{ width: '28%' }} />
+                <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-emerald-600 h-full rounded-full" style={{ width: '28%' }} />
                 </div>
               </div>
 
               {/* NDBI */}
               <div>
                 <div className="flex justify-between text-[11px] mb-1">
-                  <span className="text-slate-600 font-medium">NDBI (Built-up / Bare Soil)</span>
-                  <span className="font-mono text-amber-700 font-bold">+{selectedHotspot.ndbiDelta}</span>
+                  <span className="text-gray-700 font-medium">NDBI (Built-up / Bare Soil)</span>
+                  <span className="font-mono text-amber-800 font-bold">+{selectedHotspot.ndbiDelta}</span>
                 </div>
-                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-amber-500 h-full rounded-full" style={{ width: '74%' }} />
+                <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-amber-600 h-full rounded-full" style={{ width: '74%' }} />
                 </div>
               </div>
 
               {/* SAR Backscatter */}
               <div>
                 <div className="flex justify-between text-[11px] mb-1">
-                  <span className="text-slate-600 font-medium">SAR Backscatter (VV/VH)</span>
-                  <span className="font-mono text-sky-700 font-bold">+{selectedHotspot.sarBackscatterChangeDB} dB</span>
+                  <span className="text-gray-700 font-medium">SAR Backscatter (VV/VH)</span>
+                  <span className="font-mono text-sky-800 font-bold">+{selectedHotspot.sarBackscatterChangeDB} dB</span>
                 </div>
-                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-sky-500 h-full rounded-full" style={{ width: '65%' }} />
+                <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-sky-600 h-full rounded-full" style={{ width: '65%' }} />
                 </div>
               </div>
             </div>
 
-            <div className="p-2 rounded bg-slate-50 border border-slate-200 text-[11px] text-slate-600">
-              <strong className="text-slate-800">Observation:</strong> Heavy surface roughening and canopy stripping detected; impervious bare substrate exposed.
+            <div className="p-2 rounded bg-gray-100 border border-gray-300 text-[11px] text-gray-700">
+              <strong className="text-gray-900">Observation:</strong> Heavy surface roughening and canopy stripping detected; impervious bare substrate exposed.
             </div>
           </div>
 
           {/* Cadastral Land Records Overlay */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-2">
-            <h4 className="text-xs font-bold text-slate-900 flex items-center space-x-1.5">
-              <FileCheck className="w-3.5 h-3.5 text-amber-600" />
+          <div className="bg-gray-50 border border-gray-300 rounded-xl p-4 shadow-sm space-y-2">
+            <h4 className="text-xs font-bold text-gray-900 flex items-center space-x-1.5">
+              <FileCheck className="w-3.5 h-3.5 text-gray-700" />
               <span>Affected Cadastral Plots</span>
             </h4>
             <div className="space-y-1">
               {selectedHotspot.cadastralSurveyPlots.map((plot, idx) => (
-                <div key={idx} className="text-[11px] font-mono text-slate-700 bg-slate-50 px-2 py-1 rounded border border-slate-200">
+                <div key={idx} className="text-[11px] font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded border border-gray-300">
                   {plot}
                 </div>
               ))}

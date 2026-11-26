@@ -24,7 +24,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100/70 text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col font-sans">
       {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
@@ -76,12 +76,12 @@ export function App() {
       />
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-600 shadow-sm">
+      <footer className="bg-gray-200/90 border-t border-gray-300 py-4 text-center text-xs text-gray-600 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-medium text-slate-700">
+          <p className="font-medium text-gray-700">
             © 2026 Flugelsoft Labs. All Rights Reserved. • Lead Applicant: Kalyanjit Hatibaruah • Legal Entity: Flugelsoft Labs • Bhu-Drishti Assam • Developed for NESFIC-D-21 • Department of Science & Technology / ASSAC, Govt. of Assam
           </p>
-          <div className="flex items-center space-x-4 text-[11px] text-slate-500 font-mono">
+          <div className="flex items-center space-x-4 text-[11px] text-gray-500 font-mono">
             <span>Copernicus Open Access Sentinel-1/2</span>
             <span>•</span>
             <span>PostGIS Geospatial Engine</span>
