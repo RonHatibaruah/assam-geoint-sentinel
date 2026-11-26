@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   FileText, 
   Copy, 
@@ -9,16 +9,41 @@ import {
   BookOpen, 
   Award,
   Hash,
-  ChevronRight
+  ChevronRight,
+  Link2
 } from 'lucide-react';
 import { PROPOSAL_SECTIONS, ProposalSection } from '../data/proposalData';
+import { getRouteFromLocation, updateDocumentSEO, BASE_URL } from '../utils/seoRouter';
 import confetti from 'canvas-confetti';
 
 export const ProposalViewer: React.FC = () => {
-  const [selectedSectionId, setSelectedSectionId] = useState<number>(1);
+  const [selectedSectionId, setSelectedSectionId] = useState<number>(() => {
+    const { sectionId } = getRouteFromLocation();
+    if (sectionId && sectionId >= 1 && sectionId <= 12) {
+      return sectionId;
+    }
+    return 1;
+  });
   const [copiedId, setCopiedId] = useState<number | null>(null);
+  const [copiedLink, setCopiedLink] = useState<boolean>(false);
 
   const activeSection = PROPOSAL_SECTIONS.find(s => s.id === selectedSectionId) || PROPOSAL_SECTIONS[0];
+
+  const handleSelectSection = (id: number) => {
+    setSelectedSectionId(id);
+    const sec = PROPOSAL_SECTIONS.find(s => s.id === id);
+    window.history.pushState(null, '', `/proposal?section=${id}`);
+    if (sec) {
+      updateDocumentSEO('proposal', { sectionTitle: sec.title });
+    }
+  };
+
+  const handleCopySectionLink = () => {
+    const linkUrl = `${BASE_URL}/proposal?section=${activeSection.id}`;
+    navigator.clipboard.writeText(linkUrl);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
+  };
 
   const handleCopy = (section: ProposalSection) => {
     navigator.clipboard.writeText(section.content);
@@ -77,13 +102,20 @@ export const ProposalViewer: React.FC = () => {
           </div>
           <div className="bg-gray-50 border border-gray-300 rounded-2xl p-2 space-y-1 shadow-xs">
             {PROPOSAL_SECTIONS.map((section) => (
-              <button
+              <a
                 key={section.id}
-                onClick={() => setSelectedSectionId(section.id)}
-                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium transition-all flex items-center justify-between ${
+                href={`/proposal?section=${section.id}`}
+                onClick={(e) => {
+                  if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                    e.preventDefault();
+                    handleSelectSection(section.id);
+                  }
+                }}
+                title={section.title}
+                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium transition-all flex items-center justify-between block ${
                   selectedSectionId === section.id
                     ? 'bg-gray-800 text-white font-bold shadow-xs'
-                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-200/80'
+                    : 'text-gray-700 hover:text-gray-950 hover:bg-gray-200/80'
                 }`}
               >
                 <div className="truncate mr-2">
@@ -95,7 +127,7 @@ export const ProposalViewer: React.FC = () => {
                 }`}>
                   {section.actualWords}w
                 </span>
-              </button>
+              </a>
             ))}
           </div>
 
@@ -130,13 +162,23 @@ export const ProposalViewer: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <div className="text-right">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={handleCopySectionLink}
+                  title="Copy permanent shareable link to this section"
+                  className="px-3 py-2 rounded-xl text-xs font-semibold bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 transition-all flex items-center space-x-1 shadow-2xs"
+                >
+                  <Link2 className="w-3.5 h-3.5 text-gray-600" />
+                  <span>{copiedLink ? 'Link Copied!' : 'Share Link'}</span>
+                </button>
+
+                <div className="text-right px-2">
                   <span className="text-[10px] text-gray-500 block uppercase">Word Count</span>
                   <span className="font-mono text-emerald-700 font-bold text-xs">
                     {activeSection.actualWords} / 500 words
                   </span>
                 </div>
+
                 <button
                   onClick={() => handleCopy(activeSection)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5 ${
@@ -179,20 +221,32 @@ export const ProposalViewer: React.FC = () => {
 
               <div className="flex items-center space-x-2">
                 {activeSection.id > 1 && (
-                  <button
-                    onClick={() => setSelectedSectionId(activeSection.id - 1)}
-                    className="px-3 py-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 font-medium"
+                  <a
+                    href={`/proposal?section=${activeSection.id - 1}`}
+                    onClick={(e) => {
+                      if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                        e.preventDefault();
+                        handleSelectSection(activeSection.id - 1);
+                      }
+                    }}
+                    className="px-3 py-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 font-medium text-xs"
                   >
                     Previous Section
-                  </button>
+                  </a>
                 )}
                 {activeSection.id < 12 && (
-                  <button
-                    onClick={() => setSelectedSectionId(activeSection.id + 1)}
-                    className="px-3 py-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 font-medium"
+                  <a
+                    href={`/proposal?section=${activeSection.id + 1}`}
+                    onClick={(e) => {
+                      if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                        e.preventDefault();
+                        handleSelectSection(activeSection.id + 1);
+                      }
+                    }}
+                    className="px-3 py-1.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 border border-gray-300 font-medium text-xs"
                   >
                     Next Section
-                  </button>
+                  </a>
                 )}
               </div>
             </div>

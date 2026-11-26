@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- 1. Executive Dashboard (Home) -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://assam-geoint-sentinel.pages.dev/og-image.png</image:loc>
+      <image:title>Bhu-Drishti Assam - Statewide Automated LULC Intelligence Sentinel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/dashboard</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 2. Bi-Temporal Map Studio -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/map-studio</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Anomaly & Encroachment Alerts Queue -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/alerts</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. GeoAI Model Playground -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/playground</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. Supporting Evidence & Infographics Gallery -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/gallery</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 6. Official NESFIC-D-21 Proposal Dossier -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/proposal</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 7. Proposal Documents & Proof of Work Artifacts -->
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/Bhu_Drishti_Assam_Proposal_Document.pdf</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assam-geoint-sentinel.pages.dev/Bhu_Drishti_Assam_Proof_of_Work.pdf</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

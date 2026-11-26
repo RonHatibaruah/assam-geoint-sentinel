@@ -1,0 +1,6 @@
+# Robots.txt for Bhu-Drishti Assam (NESFIC-D-21)
+User-agent: *
+Allow: /
+
+# Canonical Sitemaps
+Sitemap: https://assam-geoint-sentinel.pages.dev/sitemap.xml

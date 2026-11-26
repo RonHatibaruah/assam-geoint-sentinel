@@ -1,0 +1,3 @@
+# Cloudflare Pages SPA Catch-all Rewrite
+# Allows direct SEO-friendly URLs to serve index.html with HTTP 200
+/*    /index.html   200

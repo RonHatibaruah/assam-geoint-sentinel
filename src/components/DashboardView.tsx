@@ -50,20 +50,34 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <button
-              onClick={() => setActiveTab('map-studio')}
+            <a
+              href="/map-studio"
+              onClick={(e) => {
+                if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                  e.preventDefault();
+                  setActiveTab('map-studio');
+                }
+              }}
+              title="Launch Bi-Temporal Map Studio"
               className="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-900 text-white font-semibold text-xs transition-all shadow-sm flex items-center justify-center space-x-2"
             >
               <Layers className="w-4 h-4" />
               <span>Launch Bi-Temporal Studio</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('proposal')}
+            </a>
+            <a
+              href="/proposal"
+              onClick={(e) => {
+                if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                  e.preventDefault();
+                  setActiveTab('proposal');
+                }
+              }}
+              title="View NESFIC-D-21 Proposal Submission Dossier"
               className="px-4 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-300 text-gray-900 border border-gray-300 font-semibold text-xs transition-all flex items-center justify-center space-x-2 shadow-xs"
             >
               <span>View NESFIC Proposal</span>
               <ArrowUpRight className="w-4 h-4 text-gray-700" />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -155,13 +169,18 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {ASSAM_HOTSPOTS.map((hotspot) => (
-              <div
+              <a
                 key={hotspot.id}
-                onClick={() => {
-                  onSelectHotspot(hotspot);
-                  setActiveTab('map-studio');
+                href={`/map-studio?hotspot=${encodeURIComponent(hotspot.id)}`}
+                onClick={(e) => {
+                  if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                    e.preventDefault();
+                    onSelectHotspot(hotspot);
+                    setActiveTab('map-studio');
+                  }
                 }}
-                className="group p-4 rounded-xl bg-gray-100/90 hover:bg-gray-200/80 border border-gray-300 hover:border-gray-400 transition-all cursor-pointer shadow-xs flex flex-col justify-between"
+                title={`Inspect ${hotspot.name} in Map Studio`}
+                className="group p-4 rounded-xl bg-gray-100/90 hover:bg-gray-200/80 border border-gray-300 hover:border-gray-400 transition-all cursor-pointer shadow-xs flex flex-col justify-between block"
               >
                 <div>
                   <div className="flex items-start justify-between">
@@ -195,7 +214,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     Δ {hotspot.areaDeltaHectares} ha
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -208,21 +227,35 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <AlertOctagon className="w-4 h-4 text-rose-700" />
                 <span>Recent Anomaly Queue</span>
               </h3>
-              <button
-                onClick={() => setActiveTab('alerts')}
+              <a
+                href="/alerts"
+                onClick={(e) => {
+                  if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                    e.preventDefault();
+                    setActiveTab('alerts');
+                  }
+                }}
+                title="View All Land-Use Anomaly Alerts"
                 className="text-xs text-rose-700 hover:text-rose-900 font-semibold flex items-center"
               >
                 <span>View All</span>
                 <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
-              </button>
+              </a>
             </div>
 
             <div className="space-y-3">
               {MOCK_ALERTS.slice(0, 3).map((alert) => (
-                <div 
+                <a 
                   key={alert.id}
-                  onClick={() => onOpenAlertDossier(alert)}
-                  className="p-3.5 rounded-xl bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200/70 transition-all cursor-pointer shadow-xs"
+                  href={`/alerts?alert=${encodeURIComponent(alert.id)}`}
+                  onClick={(e) => {
+                    if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                      e.preventDefault();
+                      onOpenAlertDossier(alert);
+                    }
+                  }}
+                  title={`View Field Inspection Dossier for ${alert.title}`}
+                  className="p-3.5 rounded-xl bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200/70 transition-all cursor-pointer shadow-xs block"
                 >
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="font-mono text-gray-600 font-semibold">{alert.id}</span>
@@ -241,19 +274,26 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                       Conf: {alert.confidence}%
                     </span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
 
           <div className="mt-4 pt-4 border-t border-gray-200">
-            <button
-              onClick={() => setActiveTab('alerts')}
+            <a
+              href="/alerts"
+              onClick={(e) => {
+                if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                  e.preventDefault();
+                  setActiveTab('alerts');
+                }
+              }}
+              title="Manage All Assam Enforcement Actions"
               className="w-full py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-900 border border-gray-300 font-semibold text-xs transition-colors flex items-center justify-center space-x-1.5 shadow-2xs"
             >
               <span>Manage All Enforcement Actions</span>
               <ChevronRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
